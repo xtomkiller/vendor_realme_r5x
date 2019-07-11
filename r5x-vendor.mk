@@ -1983,9 +1983,6 @@ PRODUCT_PACKAGES += \
     rmt_storage \
     sensors.qti \
     slim_daemon \
-    ssr_diag \
-    ssr_setup \
-    subsystem_ramdump \
     tftp_server \
     thermal-engine \
     time_daemon \
