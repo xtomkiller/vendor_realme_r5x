@@ -2200,7 +2200,6 @@ PRODUCT_PACKAGES += \
     vendor.display.color@1.3 \
     vendor.display.postproc@1.0 \
     vendor.egistec.hardware.fingerprint@4.0 \
-    vendor.oppo.hardware.biometrics.fingerprint@2.1_vendor \
     vendor.qti.data.factory@2.0 \
     vendor.qti.data.factory@2.1 \
     vendor.qti.data.factory@2.2 \

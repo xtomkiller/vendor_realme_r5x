@@ -33187,24 +33187,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-	name: "vendor.oppo.hardware.biometrics.fingerprint@2.1_vendor",
-	stem: "vendor.oppo.hardware.biometrics.fingerprint@2.1",
-	owner: "realme",
-	strip: {
-		none: true,
-	},
-	target: {
-		android_arm64: {
-			srcs: ["proprietary/vendor/lib64/vendor.oppo.hardware.biometrics.fingerprint@2.1.so"],
-			shared_libs: ["libhidlbase", "libhidltransport", "libhwbinder", "liblog", "libutils", "libcutils", "libc++", "libc", "libm", "libdl", ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
 	name: "vendor.qti.data.factory@2.0",
 	owner: "realme",
 	strip: {
@@ -36144,7 +36126,7 @@ cc_prebuilt_binary {
 	target: {
 		android_arm64: {
 			srcs: ["proprietary/vendor/bin/hw/vendor.oppo.hardware.biometrics.fingerprint@2.1-service"],
-			shared_libs: ["libbinder", "liblog", "libhidlbase", "libhidltransport", "libhwbinder", "libutils", "vendor.oppo.hardware.biometrics.fingerprint@2.1_vendor", "android.frameworks.fingerprintservice@1.0", "vendor.oppo.hardware.commondcs@1.0", "libQSEEComAPI", "libion", "libRbsFlow", "vendor.egistec.hardware.fingerprint@4.0", "vendor.oppo.hardware.hypnus@1.0", "libhypnusclient", "libhardware", "libcutils", "libc++", "libc", "libm", "libdl", ],
+			shared_libs: ["libbinder", "liblog", "libhidlbase", "libhidltransport", "libhwbinder", "libutils", "vendor.oppo.hardware.biometrics.fingerprint@2.1", "android.frameworks.fingerprintservice@1.0", "vendor.oppo.hardware.commondcs@1.0", "libQSEEComAPI", "libion", "libRbsFlow", "vendor.egistec.hardware.fingerprint@4.0", "vendor.oppo.hardware.hypnus@1.0", "libhypnusclient", "libhardware", "libcutils", "libc++", "libc", "libm", "libdl", ],
 		},
 	},
 	compile_multilib: "64",
@@ -36162,7 +36144,7 @@ cc_prebuilt_binary {
 	target: {
 		android_arm64: {
 			srcs: ["proprietary/vendor/bin/hw/vendor.oppo.hardware.biometrics.fingerprint@2.1-service-rbs"],
-			shared_libs: ["libbinder", "liblog", "libhidlbase", "libhidltransport", "libhwbinder", "libutils", "vendor.oppo.hardware.biometrics.fingerprint@2.1_vendor", "android.frameworks.fingerprintservice@1.0", "vendor.oppo.hardware.commondcs@1.0", "libRbsFlow", "vendor.egistec.hardware.fingerprint@4.0", "vendor.oppo.hardware.hypnus@1.0", "libhypnusclient", "libhardware", "libcutils", "libc++", "libc", "libm", "libdl", ],
+			shared_libs: ["libbinder", "liblog", "libhidlbase", "libhidltransport", "libhwbinder", "libutils", "vendor.oppo.hardware.biometrics.fingerprint@2.1", "android.frameworks.fingerprintservice@1.0", "vendor.oppo.hardware.commondcs@1.0", "libRbsFlow", "vendor.egistec.hardware.fingerprint@4.0", "vendor.oppo.hardware.hypnus@1.0", "libhypnusclient", "libhardware", "libcutils", "libc++", "libc", "libm", "libdl", ],
 		},
 	},
 	compile_multilib: "64",
