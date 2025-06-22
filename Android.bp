@@ -16,6 +16,28 @@ soong_namespace {
 }
 
 cc_prebuilt_library_shared {
+    name: "libminkdescriptor",
+    owner: "realme",
+    strip: {
+        none: true,
+    },
+    compile_multilib: "both",
+    srcs: [
+        "proprietary/vendor/lib/libminkdescriptor.so",
+        "proprietary/vendor/lib64/libminkdescriptor.so",
+    ],
+    multilib: {
+        lib64: {
+            srcs: ["proprietary/vendor/lib64/libminkdescriptor.so"],
+        },
+        lib32: {
+            srcs: ["proprietary/vendor/lib/libminkdescriptor.so"],
+        },
+    },
+    installable: false,
+}
+
+cc_prebuilt_library_shared {
 	name: "android.hardware.sensors@2.0-impl",
 	owner: "realme",
 	strip: {
