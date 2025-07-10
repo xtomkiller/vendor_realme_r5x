@@ -363,7 +363,6 @@ PRODUCT_PACKAGES += \
     libmpbase \
     liboppo_log_print \
     liboppoalgolib \
-    libperipheral_client \
     libpvr \
     libqcbor \
     libqcci_legacy \
@@ -2134,6 +2133,7 @@ PRODUCT_PACKAGES += \
     libops \
     libpdmapper \
     libpdnotifier \
+    libperipheral_client \
     libpn553_fw \
     libqcc_file_agent \
     libqcmaputils \

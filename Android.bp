@@ -1773,27 +1773,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-	name: "libperipheral_client",
-	owner: "realme",
-	strip: {
-		none: true,
-	},
-	target: {
-		android_arm: {
-			srcs: ["proprietary/vendor/lib/libperipheral_client.so"],
-			shared_libs: ["libcutils", "libutils", "liblog", "libbinder", "libmdmdetect", "libc++", "libc", "libm", "libdl", ],
-		},
-		android_arm64: {
-			srcs: ["proprietary/vendor/lib64/libperipheral_client.so"],
-			shared_libs: ["libcutils", "libutils", "liblog", "libbinder", "libmdmdetect", "libc++", "libc", "libm", "libdl", ],
-		},
-	},
-	compile_multilib: "both",
-	prefer: true,
-	soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
 	name: "libpvr",
 	owner: "realme",
 	strip: {
@@ -1823,7 +1802,7 @@ cc_prebuilt_library_shared {
 	target: {
 		android_arm: {
 			srcs: ["proprietary/vendor/lib/libqcbor.so"],
-			shared_libs: ["liblog", "libutils", "libc++", "libc", "libm", "libdl", ],
+			shared_libs: ["liblog", "libutils", "libcutils", "libc++", "libc", "libm", "libdl", ],
 		},
 		android_arm64: {
 			srcs: ["proprietary/vendor/lib64/libqcbor.so"],
@@ -32044,6 +32023,23 @@ cc_prebuilt_library_shared {
 		android_arm64: {
 			srcs: ["proprietary/vendor/lib64/libpdnotifier.so"],
 			shared_libs: ["libcutils", "libutils", "liblog", "libqmi_cci", "libqmi_common_so", "libqmi_encdec", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "64",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "libperipheral_client",
+	owner: "realme",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libperipheral_client.so"],
+			shared_libs: ["libcutils", "libutils", "liblog", "libbinder", "libmdmdetect", "libc++", "libc", "libm", "libdl", ],
 		},
 	},
 	compile_multilib: "64",
