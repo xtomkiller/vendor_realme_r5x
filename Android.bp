@@ -596,27 +596,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-	name: "libSubSystemShutdown",
-	owner: "realme",
-	strip: {
-		none: true,
-	},
-	target: {
-		android_arm: {
-			srcs: ["proprietary/vendor/lib/libSubSystemShutdown.so"],
-			shared_libs: ["libsubsystem_control", "libcutils", "liblog", "libmdmdetect", "libc++", "libc", "libm", "libdl", ],
-		},
-		android_arm64: {
-			srcs: ["proprietary/vendor/lib64/libSubSystemShutdown.so"],
-			shared_libs: ["libsubsystem_control", "libcutils", "liblog", "libmdmdetect", "libc++", "libc", "libm", "libdl", ],
-		},
-	},
-	compile_multilib: "both",
-	prefer: true,
-	soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
 	name: "libVkLayer_q3dtools",
 	owner: "realme",
 	strip: {
@@ -2269,27 +2248,6 @@ cc_prebuilt_library_shared {
 		android_arm64: {
 			srcs: ["proprietary/vendor/lib64/libssc_default_listener.so"],
 			shared_libs: ["liblog", "libsdsprpc", "libc++", "libc", "libm", "libdl", ],
-		},
-	},
-	compile_multilib: "both",
-	prefer: true,
-	soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "libsubsystem_control",
-	owner: "realme",
-	strip: {
-		none: true,
-	},
-	target: {
-		android_arm: {
-			srcs: ["proprietary/vendor/lib/libsubsystem_control.so"],
-			shared_libs: ["libcutils", "liblog", "libqmi_cci", "libqmi_common_so", "libmdmdetect", "libperipheral_client", "libc++", "libc", "libm", "libdl", ],
-		},
-		android_arm64: {
-			srcs: ["proprietary/vendor/lib64/libsubsystem_control.so"],
-			shared_libs: ["libcutils", "liblog", "libqmi_cci", "libqmi_common_so", "libmdmdetect", "libperipheral_client", "libc++", "libc", "libm", "libdl", ],
 		},
 	},
 	compile_multilib: "both",

@@ -311,7 +311,6 @@ PRODUCT_PACKAGES += \
     libOppoAPSMemMgr \
     libOppoAlgoClient \
     libQSEEComAPI \
-    libSubSystemShutdown \
     libVkLayer_q3dtools \
     libacdb-fts \
     libacdbloader \
@@ -391,7 +390,6 @@ PRODUCT_PACKAGES += \
     libsoc_helper_jni \
     libssc \
     libssc_default_listener \
-    libsubsystem_control \
     libthermalclient \
     sensors.ssc \
     libasphere \
