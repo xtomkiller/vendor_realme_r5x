@@ -1310,27 +1310,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-	name: "libhdmipassthru",
-	owner: "realme",
-	strip: {
-		none: true,
-	},
-	target: {
-		android_arm: {
-			srcs: ["proprietary/vendor/lib/libhdmipassthru.so"],
-			shared_libs: ["libaudioparsers", "libaudioroute", "libaudioutils", "libcutils", "libexpat", "liblog", "libtinyalsa", "libtinycompress", "libc++", "libc", "libm", "libdl", ],
-		},
-		android_arm64: {
-			srcs: ["proprietary/vendor/lib64/libhdmipassthru.so"],
-			shared_libs: ["libaudioparsers", "libaudioroute", "libaudioutils", "libcutils", "libexpat", "liblog", "libtinyalsa", "libtinycompress", "libc++", "libc", "libm", "libdl", ],
-		},
-	},
-	compile_multilib: "both",
-	prefer: true,
-	soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
 	name: "libhypnusclient",
 	owner: "realme",
 	strip: {

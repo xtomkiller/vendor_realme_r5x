@@ -345,7 +345,6 @@ PRODUCT_PACKAGES += \
     libfastcvopt \
     libgpudataproducer \
     libgsl \
-    libhdmipassthru \
     libhypnusclient \
     libidl \
     libllvm-glnext \
