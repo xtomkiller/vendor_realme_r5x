@@ -32,27 +32,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-	name: "android.hardware.sensors@2.0-impl",
-	owner: "realme",
-	strip: {
-		none: true,
-	},
-	target: {
-		android_arm: {
-			srcs: ["proprietary/vendor/lib/android.hardware.sensors@2.0-impl.so"],
-			shared_libs: ["libhidlbase", "libhidltransport", "libutils", "liblog", "libcutils", "libhardware", "libbase", "android.hardware.sensors@2.0", "libfmq", "libssc", "libsensorslog", "sensors.ssc", "libc++", "libc", "libm", "libdl", ],
-		},
-		android_arm64: {
-			srcs: ["proprietary/vendor/lib64/android.hardware.sensors@2.0-impl.so"],
-			shared_libs: ["libhidlbase", "libhidltransport", "libutils", "liblog", "libcutils", "libhardware", "libbase", "android.hardware.sensors@2.0", "libfmq", "libssc", "libsensorslog", "sensors.ssc", "libc++", "libc", "libm", "libdl", ],
-		},
-	},
-	compile_multilib: "both",
-	prefer: true,
-	soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
 	name: "btaudio_offload_if",
 	owner: "realme",
 	strip: {
@@ -2096,11 +2075,11 @@ cc_prebuilt_library_shared {
 	target: {
 		android_arm: {
 			srcs: ["proprietary/vendor/lib/libsensorcal.so"],
-			shared_libs: ["libutils", "libprotobuf-cpp-full-vendorcompat", "libsensorslog", "libcutils", "liblog", "libssc", "libc++", "libc", "libm", "libdl", ],
+			shared_libs: ["libprotobuf-cpp-lite-3.9.1-vendorcompat", "liblog", "libssc", "libutils", "libcutils", "libsensorslog", "libsnsapi", "libc++", "libc", "libm", "libdl", ],
 		},
 		android_arm64: {
 			srcs: ["proprietary/vendor/lib64/libsensorcal.so"],
-			shared_libs: ["libutils", "libprotobuf-cpp-full-vendorcompat", "libsensorslog", "libcutils", "liblog", "libssc", "libc++", "libc", "libm", "libdl", ],
+			shared_libs: ["libprotobuf-cpp-lite-3.9.1-vendorcompat", "liblog", "libssc", "libutils", "libcutils", "libsensorslog", "libsnsapi", "libc++", "libc", "libm", "libdl", ],
 		},
 	},
 	compile_multilib: "both",
@@ -2130,6 +2109,90 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+	name: "libsns_device_mode_stub",
+	owner: "realme",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/libsns_device_mode_stub.so"],
+			shared_libs: ["libsns_fastRPC_util", "liblog", "libc", "libutils", "libcutils", "libc++", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libsns_device_mode_stub.so"],
+			shared_libs: ["libsns_fastRPC_util", "liblog", "libc", "libutils", "libcutils", "libc++", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "libsns_fastRPC_util",
+	owner: "realme",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/libsns_fastRPC_util.so"],
+			shared_libs: ["liblog", "libc", "libutils", "libcutils", "libc++", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libsns_fastRPC_util.so"],
+			shared_libs: ["liblog", "libc", "libutils", "libcutils", "libc++", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "libsns_low_lat_stream_stub",
+	owner: "realme",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/libsns_low_lat_stream_stub.so"],
+			shared_libs: ["libsns_fastRPC_util", "liblog", "libc", "libutils", "libcutils", "libc++", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libsns_low_lat_stream_stub.so"],
+			shared_libs: ["libsns_fastRPC_util", "liblog", "libc", "libutils", "libcutils", "libc++", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "libsnsapi",
+	owner: "realme",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/libsnsapi.so"],
+			shared_libs: ["libprotobuf-cpp-full-3.9.1-vendorcompat", "libcutils", "libutils", "libqmi_common_so", "libqmi_cci", "libqmi_encdec", "libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libsnsapi.so"],
+			shared_libs: ["libprotobuf-cpp-full-3.9.1-vendorcompat", "libcutils", "libutils", "libqmi_common_so", "libqmi_cci", "libqmi_encdec", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
 	name: "libsnsdiaglog",
 	owner: "realme",
 	strip: {
@@ -2138,11 +2201,11 @@ cc_prebuilt_library_shared {
 	target: {
 		android_arm: {
 			srcs: ["proprietary/vendor/lib/libsnsdiaglog.so"],
-			shared_libs: ["liblog", "libprotobuf-cpp-full-vendorcompat", "libdiag", "libssc", "libsensorslog", "libutils", "libcutils", "libc++", "libc", "libm", "libdl", ],
+			shared_libs: ["libprotobuf-cpp-full-3.9.1-vendorcompat", "liblog", "libdiag", "libsensorslog", "libutils", "libcutils", "libssc", "libsnsapi", "libc++", "libc", "libm", "libdl", ],
 		},
 		android_arm64: {
 			srcs: ["proprietary/vendor/lib64/libsnsdiaglog.so"],
-			shared_libs: ["liblog", "libprotobuf-cpp-full-vendorcompat", "libdiag", "libssc", "libsensorslog", "libutils", "libcutils", "libc++", "libc", "libm", "libdl", ],
+			shared_libs: ["libprotobuf-cpp-lite-3.9.1-vendorcompat", "liblog", "libdiag", "libsensorslog", "libutils", "libcutils", "libssc", "libsnsapi", "libc++", "libc", "libm", "libdl", ],
 		},
 	},
 	compile_multilib: "both",
@@ -2201,11 +2264,11 @@ cc_prebuilt_library_shared {
 	target: {
 		android_arm: {
 			srcs: ["proprietary/vendor/lib/libssc.so"],
-			shared_libs: ["liblog", "libsensorslog", "libprotobuf-cpp-full-vendorcompat", "libqmi_common_so", "libqmi_cci", "libqmi_encdec", "libcutils", "libutils", "libc++", "libc", "libm", "libdl", ],
+			shared_libs: ["libprotobuf-cpp-lite-3.9.1-vendorcompat", "liblog", "libsensorslog", "libcutils", "libutils", "libqmi_common_so", "libqmi_cci", "libqmi_encdec", "libsnsapi", "libc++", "libc", "libm", "libdl", ],
 		},
 		android_arm64: {
 			srcs: ["proprietary/vendor/lib64/libssc.so"],
-			shared_libs: ["liblog", "libsensorslog", "libprotobuf-cpp-full-vendorcompat", "libqmi_common_so", "libqmi_cci", "libqmi_encdec", "libcutils", "libutils", "libc++", "libc", "libm", "libdl", ],
+			shared_libs: ["libprotobuf-cpp-lite-3.9.1-vendorcompat", "liblog", "libsensorslog", "libcutils", "libutils", "libqmi_common_so", "libqmi_cci", "libqmi_encdec", "libsnsapi", "libc++", "libc", "libm", "libdl", ],
 		},
 	},
 	compile_multilib: "both",
@@ -2264,11 +2327,11 @@ cc_prebuilt_library_shared {
 	target: {
 		android_arm: {
 			srcs: ["proprietary/vendor/lib/sensors.ssc.so"],
-			shared_libs: ["libssc", "liblog", "libcutils", "libsensorslog", "libprotobuf-cpp-full-vendorcompat", "libutils", "libsnsdiaglog", "libhardware", "libfmq", "libhidltransport", "libhidlbase", "android.hardware.sensors@2.0", "libc++", "libc", "libm", "libdl", ],
+			shared_libs: ["libprotobuf-cpp-lite-3.9.1-vendorcompat", "liblog", "libsnsapi", "libssc", "libsnsdiaglog", "libutils", "libcutils", "libsns_fastRPC_util", "libsensorslog", "libhardware", "libhidltransport", "libhidlbase", "android.hardware.sensors@2.0", "android.hardware.sensors@2.0-ScopedWakelock", "android.hardware.graphics.mapper@3.0", "android.hardware.graphics.mapper@2.0", "vendor.qti.hardware.display.mapper@3.0", "vendor.qti.hardware.display.mapper@1.1", "libc++", "libc", "libm", "libdl", ],
 		},
 		android_arm64: {
 			srcs: ["proprietary/vendor/lib64/sensors.ssc.so"],
-			shared_libs: ["libssc", "liblog", "libcutils", "libsensorslog", "libprotobuf-cpp-full-vendorcompat", "libutils", "libsnsdiaglog", "libhardware", "libfmq", "libhidltransport", "libhidlbase", "android.hardware.sensors@2.0", "libc++", "libc", "libm", "libdl", ],
+			shared_libs: ["libprotobuf-cpp-lite-3.9.1-vendorcompat", "liblog", "libsnsapi", "libssc", "libsnsdiaglog", "libutils", "libcutils", "libsns_fastRPC_util", "libsensorslog", "libhardware", "libhidltransport", "libhidlbase", "android.hardware.sensors@2.0", "android.hardware.sensors@2.0-ScopedWakelock", "android.hardware.graphics.mapper@3.0", "android.hardware.graphics.mapper@2.0", "vendor.qti.hardware.display.mapper@3.0", "vendor.qti.hardware.display.mapper@1.1", "libc++", "libc", "libm", "libdl", ],
 		},
 	},
 	compile_multilib: "both",
@@ -2475,11 +2538,11 @@ cc_prebuilt_library_shared {
 	target: {
 		android_arm: {
 			srcs: ["proprietary/vendor/lib/vendor.qti.hardware.sensorscalibrate@1.0.so"],
-			shared_libs: ["libhidlbase", "libhidltransport", "libhwbinder", "liblog", "libutils", "libcutils", "libc++", "libc", "libm", "libdl", ],
+			shared_libs: ["libhidlbase", "liblog", "libutils", "libcutils", "libc++", "libc", "libm", "libdl", ],
 		},
 		android_arm64: {
 			srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.sensorscalibrate@1.0.so"],
-			shared_libs: ["libhidlbase", "libhidltransport", "libhwbinder", "liblog", "libutils", "libcutils", "libc++", "libc", "libm", "libdl", ],
+			shared_libs: ["libhidlbase", "liblog", "libutils", "libcutils", "libc++", "libc", "libm", "libdl", ],
 		},
 	},
 	compile_multilib: "both",
@@ -32666,40 +32729,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-	name: "libsns_fastRPC_util",
-	owner: "realme",
-	strip: {
-		none: true,
-	},
-	target: {
-		android_arm64: {
-			srcs: ["proprietary/vendor/lib64/libsns_fastRPC_util.so"],
-			shared_libs: ["liblog", "libutils", "libcutils", "libc++", "libc", "libm", "libdl", ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "libsns_low_lat_stream_stub",
-	owner: "realme",
-	strip: {
-		none: true,
-	},
-	target: {
-		android_arm64: {
-			srcs: ["proprietary/vendor/lib64/libsns_low_lat_stream_stub.so"],
-			shared_libs: ["libsns_fastRPC_util", "liblog", "libutils", "libcutils", "libc++", "libc", "libm", "libdl", ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
 	name: "libspl",
 	owner: "realme",
 	strip: {
@@ -35503,24 +35532,6 @@ cc_prebuilt_binary {
 }
 
 cc_prebuilt_binary {
-	name: "android.hardware.sensors@2.0-service",
-	owner: "realme",
-	target: {
-		android_arm64: {
-			srcs: ["proprietary/vendor/bin/hw/android.hardware.sensors@2.0-service"],
-			shared_libs: ["liblog", "libcutils", "libbase", "libutils", "libfmq", "libhardware", "libsensorslog", "libssc", "sensors.ssc", "libhidlbase", "libhidltransport", "android.hardware.sensors@2.0", "android.hardware.sensors@2.0-impl", "libc++", "libc", "libm", "libdl", ],
-		},
-	},
-	compile_multilib: "64",
-	strip: {
-		none: true,
-	},
-	prefer: true,
-	relative_install_path: "hw",
-	soc_specific: true,
-}
-
-cc_prebuilt_binary {
 	name: "qcrild",
 	owner: "realme",
 	target: {
@@ -35766,6 +35777,14 @@ cc_prebuilt_binary {
 		none: true,
 	},
 	prefer: true,
+	soc_specific: true,
+}
+
+sh_binary {
+	name: "init.qcom.sensors",
+	owner: "realme",
+	src: "proprietary/vendor/bin/init.qcom.sensors.sh",
+	filename: "init.qcom.sensors.sh",
 	soc_specific: true,
 }
 
@@ -36098,7 +36117,7 @@ cc_prebuilt_binary {
 	target: {
 		android_arm64: {
 			srcs: ["proprietary/vendor/bin/sensors.qti"],
-			shared_libs: ["liblog", "libdiag", "libssc", "libprotobuf-cpp-full-vendorcompat", "libsensorslog", "libcutils", "libc++", "libc", "libm", "libdl", ],
+			shared_libs: ["libprotobuf-cpp-lite-3.9.1-vendorcompat", "liblog", "libdiag", "libssc", "libsensorslog", "libcutils", "libsnsapi", "libc++", "libc", "libm", "libdl", ],
 		},
 	},
 	compile_multilib: "64",
