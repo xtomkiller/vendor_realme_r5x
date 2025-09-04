@@ -2257,16 +2257,12 @@ PRODUCT_PACKAGES += \
     librilqmiservices \
     librmp \
     librpmb \
-    libscveBlobDescriptor \
-    libscveBlobDescriptor_stub \
     libscveCommon \
     libscveCommon_stub \
     libscveObjectSegmentation \
     libscveObjectSegmentation_stub \
     libscveObjectTracker \
     libscveObjectTracker_stub \
-    libscvePanorama \
-    libscvePanorama_lite \
     libsdedrm \
     libsdm-color \
     libsdm-colormgr-algo \

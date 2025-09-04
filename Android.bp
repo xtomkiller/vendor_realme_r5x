@@ -1234,11 +1234,11 @@ cc_prebuilt_library_shared {
 	target: {
 		android_arm: {
 			srcs: ["proprietary/vendor/lib/libfastcvopt.so"],
-			shared_libs: ["liblog", "libion", "libOpenCL", "libfastcvdsp_stub", "libcdsprpc", "libc++", "libc", "libm", "libdl", ],
+			shared_libs: ["liblog", "libion", "libfastcvdsp_stub", "libcdsprpc", "libc++", "libc", "libm", "libdl", ],
 		},
 		android_arm64: {
 			srcs: ["proprietary/vendor/lib64/libfastcvopt.so"],
-			shared_libs: ["liblog", "libion", "libOpenCL", "libfastcvdsp_stub", "libcdsprpc", "libc++", "libc", "libm", "libdl", ],
+			shared_libs: ["liblog", "libion", "libfastcvdsp_stub", "libcdsprpc", "libc++", "libc", "libm", "libdl", ],
 		},
 	},
 	compile_multilib: "both",
@@ -32372,40 +32372,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-	name: "libscveBlobDescriptor",
-	owner: "realme",
-	strip: {
-		none: true,
-	},
-	target: {
-		android_arm64: {
-			srcs: ["proprietary/vendor/lib64/libscveBlobDescriptor.so"],
-			shared_libs: ["liblog", "libfastcvopt", "libscveCommon", "libc++", "libc", "libm", "libdl", ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "libscveBlobDescriptor_stub",
-	owner: "realme",
-	strip: {
-		none: true,
-	},
-	target: {
-		android_arm64: {
-			srcs: ["proprietary/vendor/lib64/libscveBlobDescriptor_stub.so"],
-			shared_libs: ["liblog", "libcdsprpc", "libc++", "libc", "libm", "libdl", ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
 	name: "libscveCommon",
 	owner: "realme",
 	strip: {
@@ -32500,40 +32466,6 @@ cc_prebuilt_library_shared {
 		android_arm64: {
 			srcs: ["proprietary/vendor/lib64/libscveObjectTracker_stub.so"],
 			shared_libs: ["libfastcvopt", "liblog", "libscveCommon", "libcdsprpc", "libc++", "libc", "libm", "libdl", ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "libscvePanorama",
-	owner: "realme",
-	strip: {
-		none: true,
-	},
-	target: {
-		android_arm64: {
-			srcs: ["proprietary/vendor/lib64/libscvePanorama.so"],
-			shared_libs: ["libjpeg", "liblog", "libfastcvopt", "libscveCommon", "libscveBlobDescriptor", "libc++", "libc", "libm", "libdl", ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "libscvePanorama_lite",
-	owner: "realme",
-	strip: {
-		none: true,
-	},
-	target: {
-		android_arm64: {
-			srcs: ["proprietary/vendor/lib64/libscvePanorama_lite.so"],
-			shared_libs: ["libjpeg", "liblog", "libfastcvopt", "libscveCommon", "libscveBlobDescriptor", "libc++", "libc", "libm", "libdl", ],
 		},
 	},
 	compile_multilib: "64",
