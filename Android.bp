@@ -562,7 +562,7 @@ cc_prebuilt_library_shared {
 	target: {
 		android_arm: {
 			srcs: ["proprietary/vendor/lib/libQSEEComAPI.so"],
-			shared_libs: ["libcutils", "libutils", "liblog", "libion", "libc++", "libc", "libm", "libdl", ],
+			shared_libs: ["libion", "libcutils", "libutils", "liblog", "libc++", "libc", "libm", "libdl", ],
 		},
 		android_arm64: {
 			srcs: ["proprietary/vendor/lib64/libQSEEComAPI.so"],
