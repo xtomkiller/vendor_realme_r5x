@@ -2180,11 +2180,11 @@ cc_prebuilt_library_shared {
 	target: {
 		android_arm: {
 			srcs: ["proprietary/vendor/lib/libsnsapi.so"],
-			shared_libs: ["libprotobuf-cpp-full-3.9.1-vendorcompat", "libcutils", "libutils", "libqmi_common_so", "libqmi_cci", "libqmi_encdec", "libc++", "libc", "libm", "libdl", ],
+			shared_libs: ["libprotobuf-cpp-lite-3.9.1-vendorcompat", "libcutils", "libutils", "libqmi_common_so", "libqmi_cci", "libqmi_encdec", "libc++", "libc", "libm", "libdl", ],
 		},
 		android_arm64: {
 			srcs: ["proprietary/vendor/lib64/libsnsapi.so"],
-			shared_libs: ["libprotobuf-cpp-full-3.9.1-vendorcompat", "libcutils", "libutils", "libqmi_common_so", "libqmi_cci", "libqmi_encdec", "libc++", "libc", "libm", "libdl", ],
+			shared_libs: ["libprotobuf-cpp-lite-3.9.1-vendorcompat", "libcutils", "libutils", "libqmi_common_so", "libqmi_cci", "libqmi_encdec", "libc++", "libc", "libm", "libdl", ],
 		},
 	},
 	compile_multilib: "both",
@@ -2201,7 +2201,7 @@ cc_prebuilt_library_shared {
 	target: {
 		android_arm: {
 			srcs: ["proprietary/vendor/lib/libsnsdiaglog.so"],
-			shared_libs: ["libprotobuf-cpp-full-3.9.1-vendorcompat", "liblog", "libdiag", "libsensorslog", "libutils", "libcutils", "libssc", "libsnsapi", "libc++", "libc", "libm", "libdl", ],
+			shared_libs: ["libprotobuf-cpp-lite-3.9.1-vendorcompat", "liblog", "libdiag", "libsensorslog", "libutils", "libcutils", "libssc", "libsnsapi", "libc++", "libc", "libm", "libdl", ],
 		},
 		android_arm64: {
 			srcs: ["proprietary/vendor/lib64/libsnsdiaglog.so"],
