@@ -1745,7 +1745,6 @@ PRODUCT_PACKAGES += \
     libsettings \
     libsi \
     libslimclient \
-    libspl \
     libssd \
     libsystem_health_mon \
     libtime_genoff \
