@@ -143,6 +143,7 @@ PRODUCT_COPY_FILES += \
     vendor/realme/r5x/proprietary/vendor/etc/qdcm_calib_data_td4330_cmd_mode_dsi_truly_panel.xml:$(TARGET_COPY_OUT_VENDOR)/etc/qdcm_calib_data_td4330_cmd_mode_dsi_truly_panel.xml \
     vendor/realme/r5x/proprietary/vendor/etc/qdcm_calib_data_td4330_video_mode_dsi_truly_panel.xml:$(TARGET_COPY_OUT_VENDOR)/etc/qdcm_calib_data_td4330_video_mode_dsi_truly_panel.xml \
     vendor/realme/r5x/proprietary/vendor/etc/seccomp_policy/codec2.vendor.base.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/codec2.vendor.base.policy \
+    vendor/realme/r5x/proprietary/vendor/etc/seccomp_policy/codec2.vendor.ext.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/codec2.vendor.ext.policy \
     vendor/realme/r5x/proprietary/vendor/etc/seccomp_policy/vendor.qti.hardware.dsp.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/vendor.qti.hardware.dsp.policy \
     vendor/realme/r5x/proprietary/vendor/etc/sensors/config/alsps.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/alsps.json \
     vendor/realme/r5x/proprietary/vendor/etc/sensors/config/bmi160_0.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/bmi160_0.json \
@@ -458,12 +459,12 @@ PRODUCT_PACKAGES += \
     libmmcamera_faceproc2 \
     libmmcamera_tintless_algo \
     libmmcamera_tintless_bg_pca_algo \
+    libmmosal \
     libmpbase \
     liboppo_log_print \
     liboppoalgolib \
     libqcbor \
     libqcci_legacy \
-    libqcodec2 \
     libqdi \
     libqdp \
     libqmi \
@@ -489,6 +490,8 @@ PRODUCT_PACKAGES += \
     libssc \
     libssc_default_listener \
     libthermalclient \
+    libvpphvx \
+    libvpplibrary \
     sensors.ssc \
     libasphere \
     vendor.oppo.hardware.camera.oppoAlgoProcessService@1.0 \
@@ -500,6 +503,9 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.dsp@1.0 \
     vendor.qti.hardware.fingerprint@1.0 \
     vendor.qti.hardware.sensorscalibrate@1.0 \
+    vendor.qti.hardware.vpp@1.1 \
+    vendor.qti.hardware.vpp@1.2 \
+    vendor.qti.hardware.vpp@1.3 \
     camera.trinket \
     vendor.oppo.hardware.camera.oppoHalAssist@1.0-impl \
     imx386_PdafLibrary \
@@ -1597,6 +1603,7 @@ PRODUCT_PACKAGES += \
     liboppo_aisd \
     liboppo_platform_hwi \
     liboppocamalgo_daemon \
+    libqcodec2 \
     libqomx_core \
     libqomx_jpegdec \
     libqomx_jpegenc \
@@ -1620,6 +1627,7 @@ PRODUCT_PACKAGES += \
     libsymphonypower \
     libthread_blur \
     libvideoutils \
+    libvppclient \
     libdiraceffect \
     vendor.oppo.hardware.camera.oppoHalAssist@1.0 \
     android.frameworks.fingerprintservice@1.0 \
@@ -1746,10 +1754,6 @@ PRODUCT_PACKAGES += \
     libtime_genoff \
     libtinyxml2_1 \
     libtrustedapploader \
-    libvppclient \
-    libvpphvx \
-    libvpplibrary \
-    libvpptestutils \
     libwms \
     libwqe \
     libwvhidl \
@@ -1821,9 +1825,6 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.radio.uim_remote_client@1.2 \
     vendor.qti.hardware.radio.uim_remote_server@1.0 \
     vendor.qti.hardware.tui_comm@1.0 \
-    vendor.qti.hardware.vpp@1.1 \
-    vendor.qti.hardware.vpp@1.2 \
-    vendor.qti.hardware.vpp@1.3 \
     vendor.qti.ims.callinfo@1.0 \
     vendor.qti.ims.rcsconfig@1.0 \
     vendor.qti.ims.rcsconfig@1.1 \
@@ -1980,6 +1981,7 @@ PRODUCT_PACKAGES += \
     tftp_server \
     thermal-engine \
     time_daemon \
+    vppservice \
     xtra-daemon \
     dpmd
 

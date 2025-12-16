@@ -3335,6 +3335,47 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libmmosal",
+    owner: "realme",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libmmosal.so",
+            ],
+            shared_libs: [
+                "libutils",
+                "libcutils",
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libmmosal.so",
+            ],
+            shared_libs: [
+                "libutils",
+                "libcutils",
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libmpbase",
     owner: "realme",
     strip: {
@@ -3523,55 +3564,6 @@ cc_prebuilt_library_shared {
                 "libqmi_client_qmux",
                 "libqmi",
                 "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "both",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libqcodec2",
-    owner: "realme",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/libqcodec2.so",
-            ],
-            shared_libs: [
-                "libutils",
-                "libcutils",
-                "liblog",
-                "libcodec2_vndk",
-                "libqdMetaData",
-                "libhidlbase",
-                "android.hardware.graphics.mapper@3.0",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libqcodec2.so",
-            ],
-            shared_libs: [
-                "libutils",
-                "libcutils",
-                "liblog",
-                "libcodec2_vndk",
-                "libqdMetaData",
-                "libhidlbase",
-                "android.hardware.graphics.mapper@3.0",
                 "libc++",
                 "libc",
                 "libm",
@@ -4690,6 +4682,102 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libvpphvx",
+    owner: "realme",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libvpphvx.so",
+            ],
+            shared_libs: [
+                "libcutils",
+                "liblog",
+                "libadsprpc",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libvpphvx.so",
+            ],
+            shared_libs: [
+                "libcutils",
+                "liblog",
+                "libadsprpc",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libvpplibrary",
+    owner: "realme",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libvpplibrary.so",
+            ],
+            shared_libs: [
+                "libhidlbase",
+                "libutils",
+                "vendor.qti.hardware.capabilityconfigstore@1.0",
+                "libcutils",
+                "liblog",
+                "libqdMetaData",
+                "libion",
+                "libvpphvx",
+                "libadsprpc",
+                "libC2D2",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libvpplibrary.so",
+            ],
+            shared_libs: [
+                "libhidlbase",
+                "libutils",
+                "vendor.qti.hardware.capabilityconfigstore@1.0",
+                "libcutils",
+                "liblog",
+                "libqdMetaData",
+                "libion",
+                "libvpphvx",
+                "libadsprpc",
+                "libC2D2",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "sensors.ssc",
     owner: "realme",
     strip: {
@@ -5193,6 +5281,141 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/vendor.qti.hardware.sensorscalibrate@1.0.so",
             ],
             shared_libs: [
+                "libhidlbase",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.qti.hardware.vpp@1.1",
+    owner: "realme",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/vendor.qti.hardware.vpp@1.1.so",
+            ],
+            shared_libs: [
+                "libhidlbase",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/vendor.qti.hardware.vpp@1.1.so",
+            ],
+            shared_libs: [
+                "libhidlbase",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.qti.hardware.vpp@1.2",
+    owner: "realme",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/vendor.qti.hardware.vpp@1.2.so",
+            ],
+            shared_libs: [
+                "vendor.qti.hardware.vpp@1.1",
+                "libhidlbase",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/vendor.qti.hardware.vpp@1.2.so",
+            ],
+            shared_libs: [
+                "vendor.qti.hardware.vpp@1.1",
+                "libhidlbase",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.qti.hardware.vpp@1.3",
+    owner: "realme",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/vendor.qti.hardware.vpp@1.3.so",
+            ],
+            shared_libs: [
+                "vendor.qti.hardware.vpp@1.1",
+                "vendor.qti.hardware.vpp@1.2",
+                "libhidlbase",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/vendor.qti.hardware.vpp@1.3.so",
+            ],
+            shared_libs: [
+                "vendor.qti.hardware.vpp@1.1",
+                "vendor.qti.hardware.vpp@1.2",
                 "libhidlbase",
                 "liblog",
                 "libutils",
@@ -34147,6 +34370,37 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libqcodec2",
+    owner: "realme",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libqcodec2.so",
+            ],
+            shared_libs: [
+                "libutils",
+                "libcutils",
+                "liblog",
+                "libcodec2_vndk",
+                "libqdMetaData",
+                "libhidlbase",
+                "android.hardware.graphics.mapper@3.0",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "32",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libqomx_core",
     owner: "realme",
     strip: {
@@ -34728,6 +34982,42 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib/libvideoutils.so",
             ],
             shared_libs: [
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "32",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libvppclient",
+    owner: "realme",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libvppclient.so",
+            ],
+            shared_libs: [
+                "libhidlbase",
+                "libhidltransport",
+                "liblog",
+                "libhwbinder",
+                "libutils",
+                "libhardware",
+                "vendor.qti.hardware.vpp@1.1",
+                "vendor.qti.hardware.vpp@1.2",
+                "vendor.qti.hardware.vpp@1.3",
+                "libvpplibrary",
+                "libcutils",
+                "libqdMetaData",
                 "libc++",
                 "libc",
                 "libm",
@@ -38615,130 +38905,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libvppclient",
-    owner: "realme",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libvppclient.so",
-            ],
-            shared_libs: [
-                "libhidlbase",
-                "libhidltransport",
-                "liblog",
-                "libhwbinder",
-                "libutils",
-                "libhardware",
-                "vendor.qti.hardware.vpp@1.1",
-                "vendor.qti.hardware.vpp@1.2",
-                "vendor.qti.hardware.vpp@1.3",
-                "libvpplibrary",
-                "libcutils",
-                "libqdMetaData",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libvpphvx",
-    owner: "realme",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libvpphvx.so",
-            ],
-            shared_libs: [
-                "libcutils",
-                "liblog",
-                "libadsprpc",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libvpplibrary",
-    owner: "realme",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libvpplibrary.so",
-            ],
-            shared_libs: [
-                "libhidlbase",
-                "libutils",
-                "vendor.qti.hardware.capabilityconfigstore@1.0",
-                "libcutils",
-                "liblog",
-                "libqdMetaData",
-                "libion",
-                "libvpphvx",
-                "libadsprpc",
-                "libC2D2",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libvpptestutils",
-    owner: "realme",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libvpptestutils.so",
-            ],
-            shared_libs: [
-                "libcutils",
-                "liblog",
-                "libvpplibrary",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libwms",
     owner: "realme",
     strip: {
@@ -40959,93 +41125,6 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so",
             ],
             shared_libs: [
-                "libhidlbase",
-                "liblog",
-                "libutils",
-                "libcutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.vpp@1.1",
-    owner: "realme",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/vendor.qti.hardware.vpp@1.1.so",
-            ],
-            shared_libs: [
-                "libhidlbase",
-                "liblog",
-                "libutils",
-                "libcutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.vpp@1.2",
-    owner: "realme",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/vendor.qti.hardware.vpp@1.2.so",
-            ],
-            shared_libs: [
-                "vendor.qti.hardware.vpp@1.1",
-                "libhidlbase",
-                "liblog",
-                "libutils",
-                "libcutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.vpp@1.3",
-    owner: "realme",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/vendor.qti.hardware.vpp@1.3.so",
-            ],
-            shared_libs: [
-                "vendor.qti.hardware.vpp@1.1",
-                "vendor.qti.hardware.vpp@1.2",
                 "libhidlbase",
                 "liblog",
                 "libutils",
@@ -44324,6 +44403,42 @@ cc_prebuilt_binary {
                 "libqmi_cci",
                 "libqmi_common_so",
                 "libc++",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "vppservice",
+    owner: "realme",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/bin/vppservice",
+            ],
+            shared_libs: [
+                "libhidlbase",
+                "libhidltransport",
+                "liblog",
+                "libhwbinder",
+                "libutils",
+                "libhardware",
+                "vendor.qti.hardware.vpp@1.1",
+                "vendor.qti.hardware.vpp@1.2",
+                "vendor.qti.hardware.vpp@1.3",
+                "libcutils",
+                "libvpplibrary",
+                "libqdMetaData",
+                "libc++",
+                "libc",
                 "libm",
                 "libdl",
             ],
