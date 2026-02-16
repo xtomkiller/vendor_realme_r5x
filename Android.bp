@@ -43343,46 +43343,6 @@ cc_prebuilt_binary {
 }
 
 cc_prebuilt_binary {
-    name: "vendor.oppo.hardware.biometrics.fingerprint@2.1-service-rbs",
-    owner: "realme",
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/bin/hw/vendor.oppo.hardware.biometrics.fingerprint@2.1-service-rbs",
-            ],
-            shared_libs: [
-                "libbinder",
-                "liblog",
-                "libhidlbase",
-                "libhidltransport",
-                "libhwbinder",
-                "libutils",
-                "vendor.oppo.hardware.biometrics.fingerprint@2.1",
-                "android.frameworks.fingerprintservice@1.0",
-                "vendor.oppo.hardware.commondcs@1.0",
-                "libRbsFlow",
-                "vendor.egistec.hardware.fingerprint@4.0",
-                "vendor.oppo.hardware.hypnus@1.0",
-                "libhypnusclient",
-                "libhardware",
-                "libcutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    strip: {
-        none: true,
-    },
-    prefer: true,
-    relative_install_path: "hw",
-    soc_specific: true,
-}
-
-cc_prebuilt_binary {
     name: "vendor.oppo.hardware.camera.oppoAlgoProcessService@1.0-service",
     owner: "realme",
     target: {

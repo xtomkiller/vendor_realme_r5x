@@ -1860,7 +1860,6 @@ PRODUCT_PACKAGES += \
     qcrild \
     vendor.display.color@1.0-service \
     vendor.oppo.hardware.biometrics.fingerprint@2.1-service \
-    vendor.oppo.hardware.biometrics.fingerprint@2.1-service-rbs \
     vendor.oppo.hardware.camera.oppoAlgoProcessService@1.0-service \
     vendor.qti.hardware.alarm@1.0-service \
     vendor.qti.hardware.capabilityconfigstore@1.0-service \
