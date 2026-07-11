@@ -430,6 +430,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.vpp@1.1 \
     vendor.qti.hardware.vpp@1.2 \
     vendor.qti.hardware.vpp@1.3 \
+    android.frameworks.displayservice@1.0 \
     camera.trinket \
     vendor.oppo.hardware.camera.oppoHalAssist@1.0-impl \
     imx386_PdafLibrary \
